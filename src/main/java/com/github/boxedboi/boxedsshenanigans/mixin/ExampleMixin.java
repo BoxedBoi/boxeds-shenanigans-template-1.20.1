@@ -1,4 +1,4 @@
-package net.boxedboi.boxedsshenanigans.mixin;
+package com.github.boxedboi.boxedsshenanigans.mixin;
 
 import net.minecraft.server.MinecraftServer;
 import org.spongepowered.asm.mixin.Mixin;
