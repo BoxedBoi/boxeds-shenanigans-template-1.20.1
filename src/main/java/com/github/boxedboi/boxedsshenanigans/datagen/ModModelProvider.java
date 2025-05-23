@@ -3,7 +3,6 @@ package com.github.boxedboi.boxedsshenanigans.datagen;
 import com.github.boxedboi.boxedsshenanigans.item.ModItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
-import net.minecraft.client.render.item.ItemModels;
 import net.minecraft.data.client.BlockStateModelGenerator;
 import net.minecraft.data.client.ItemModelGenerator;
 import net.minecraft.data.client.Models;

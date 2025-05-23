@@ -8,8 +8,8 @@
         "BoxedBoi"
     ],
     "contact": {
-        "homepage": "https://fabricmc.net/",
-        "sources": "https://github.com/FabricMC/fabric-example-mod"
+        "homepage": "https://github.com/BoxedBoi/boxeds-shenanigans-template-1.20.1",
+        "sources": "https://github.com/BoxedBoi/boxeds-shenanigans-template-1.20.1"
     },
     "license": "ARR",
     "icon": "assets/boxeds-shenanigans/icon.png",
