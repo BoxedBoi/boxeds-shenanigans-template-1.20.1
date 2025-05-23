@@ -66,6 +66,11 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .criterion(hasItem(Items.GLASS_BOTTLE), conditionsFromItem(Items.GLASS_BOTTLE))
                 .criterion(hasItem(ModItems.BOTTLE_OF_SNACKIES_JELLY), conditionsFromItem(ModItems.BOTTLE_OF_SNACKIES_JELLY))
                 .offerTo(exporter,new Identifier(getRecipeName(ModItems.BOTTLE_OF_SNACKIES_JELLY)));
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.COMBAT, Items.NETHERITE_CHESTPLATE,1)
+                .input(ModItems.SCARFED_NETHERITE_CHESTPLATE)
+                .criterion(hasItem(ModItems.SCARFED_NETHERITE_CHESTPLATE), conditionsFromItem(ModItems.SCARFED_NETHERITE_CHESTPLATE))
+                .offerTo(exporter,new Identifier(getRecipeName(Items.NETHERITE_CHESTPLATE)));
     }
 
     public static void offerCustomUpgradeRecipe(Consumer<RecipeJsonProvider> exporter, Item input, RecipeCategory category, Item result, Item template, Item material) {
