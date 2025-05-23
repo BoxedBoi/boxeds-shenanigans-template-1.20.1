@@ -13,11 +13,22 @@ import net.minecraft.util.Identifier;
 public class ModItems {
 
     public static final Item CLOTH = registerItem("cloth", new Item(new FabricItemSettings()));
+    public static final Item SNACKIES = registerItem("snackies", new Item(new FabricItemSettings().food(ModFoodComponents.SNACKIES)));
+    public static final Item BOTTLE_OF_SNACKIES_JELLY = registerItem("bottle_of_snackies_jelly", new Item(new FabricItemSettings().food(ModFoodComponents.BOTTLE_OF_SNACKIES_JELLY)));
 
 
     private static void addItemsToIngredientTabItemGroup(FabricItemGroupEntries entries) {
         entries.add(CLOTH);
     }
+    private static void addItemsToIngredientTabItemGroups(FabricItemGroupEntries entries) {
+        entries.add(SNACKIES);
+    }
+
+    private static void addItemsToIngredientTabItemGroupss(FabricItemGroupEntries entries) {
+        entries.add(BOTTLE_OF_SNACKIES_JELLY);
+    }
+
+
 
     /**
      * Register an {@link Item} in the registry.
@@ -33,6 +44,8 @@ public class ModItems {
         BoxedsShenanigans.LOGGER.info("Registering Mod Items for " + BoxedsShenanigans.MOD_ID);
 
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(ModItems::addItemsToIngredientTabItemGroup);
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.FOOD_AND_DRINK).register(ModItems::addItemsToIngredientTabItemGroups);
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.FOOD_AND_DRINK).register(ModItems::addItemsToIngredientTabItemGroupss);
     }
 
 }
