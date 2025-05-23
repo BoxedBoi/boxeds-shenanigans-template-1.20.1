@@ -3,6 +3,7 @@ package com.github.boxedboi.boxedsshenanigans.datagen;
 import com.github.boxedboi.boxedsshenanigans.item.ModItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
+import net.minecraft.block.Blocks;
 import net.minecraft.data.server.recipe.RecipeJsonProvider;
 import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
 import net.minecraft.data.server.recipe.SmithingTransformRecipeJsonBuilder;
@@ -41,4 +42,23 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .criterion(hasItem(material), conditionsFromItem(material))
                 .offerTo(exporter, getItemPath(result) + "_smithing");
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
