@@ -20,6 +20,10 @@ public class ModModelProvider extends FabricModelProvider {
 
     @Override
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
+        /*
+        to add another item model generation statement, add a new line like this:
+        itemModelGenerator.register(ModItems.ITEM_NAME_ALL_CAPS, Models.MODEL_TYPE_OF_ITEM);
+         */
         itemModelGenerator.register(ModItems.CLOTH, Models.GENERATED);
     }
 }
