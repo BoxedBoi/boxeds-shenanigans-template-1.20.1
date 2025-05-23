@@ -4,6 +4,7 @@ import com.github.boxedboi.boxedsshenanigans.BoxedsShenanigans;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroupEntries;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
+import net.minecraft.item.ArmorItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroups;
 import net.minecraft.registry.Registries;
@@ -15,7 +16,8 @@ public class ModItems {
     public static final Item CLOTH = registerItem("cloth", new Item(new FabricItemSettings()));
     public static final Item SNACKIES = registerItem("snackies", new Item(new FabricItemSettings().food(ModFoodComponents.SNACKIES)));
     public static final Item BOTTLE_OF_SNACKIES_JELLY = registerItem("bottle_of_snackies_jelly", new Item(new FabricItemSettings().food(ModFoodComponents.BOTTLE_OF_SNACKIES_JELLY)));
-
+public static final Item SCARFED_NETHERITE_CHESTPLATE = registerItem("scarfed_netherite_chestplate",
+        new ArmorItem(ModArmorMaterials.SCARFED, ArmorItem.Type.CHESTPLATE, new FabricItemSettings()));
     private static void addItemsToIngredientTabItemGroup(FabricItemGroupEntries entries) {
         entries.add(CLOTH);
     }
@@ -23,6 +25,10 @@ public class ModItems {
     private static void addItemsToFoodAndDrinkTabItemGroup(FabricItemGroupEntries entries) {
         entries.add(SNACKIES);
         entries.add(BOTTLE_OF_SNACKIES_JELLY);
+    }
+
+    private static void addItemsToCombatTabItemGroup(FabricItemGroupEntries entries) {
+        entries.add(SCARFED_NETHERITE_CHESTPLATE);
     }
 
     /**
@@ -40,6 +46,7 @@ public class ModItems {
 
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(ModItems::addItemsToIngredientTabItemGroup);
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.FOOD_AND_DRINK).register(ModItems::addItemsToFoodAndDrinkTabItemGroup);
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.COMBAT).register(ModItems::addItemsToCombatTabItemGroup);
     }
 
 }

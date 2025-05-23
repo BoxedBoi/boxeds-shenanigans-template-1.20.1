@@ -33,6 +33,32 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .criterion(hasItem(ModItems.CLOTH), conditionsFromItem(ModItems.CLOTH))
                 .offerTo(exporter, new Identifier(getRecipeName(ModItems.CLOTH)));
 
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.FOOD, ModItems.SNACKIES, 3)
+                .pattern("###")
+                .pattern("#R#")
+                .pattern("###")
+                .input('#', Items.SUGAR)
+                .input('R', Items.RED_DYE)
+                .criterion(hasItem(Items.SUGAR), conditionsFromItem(Items.SUGAR))
+                .criterion(hasItem(Items.RED_DYE), conditionsFromItem(Items.RED_DYE))
+                .criterion(hasItem(ModItems.SNACKIES), conditionsFromItem(ModItems.SNACKIES))
+                .offerTo(exporter, new Identifier(getRecipeName(ModItems.SNACKIES)));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.SCARFED_NETHERITE_CHESTPLATE, 1)
+                .pattern(" # ")
+                .pattern(" N ")
+                .pattern("   ")
+                .input('#', ModItems.CLOTH)
+                .input('N', Items.NETHERITE_CHESTPLATE)
+                .criterion(hasItem(ModItems.CLOTH), conditionsFromItem(ModItems.CLOTH))
+                .criterion(hasItem(Items.NETHERITE_CHESTPLATE), conditionsFromItem(Items.NETHERITE_CHESTPLATE))
+                .criterion(hasItem(ModItems.SCARFED_NETHERITE_CHESTPLATE), conditionsFromItem(ModItems.SCARFED_NETHERITE_CHESTPLATE))
+                .offerTo(exporter, new Identifier(getRecipeName(ModItems.SCARFED_NETHERITE_CHESTPLATE)));
+
+
+
+
         ShapelessRecipeJsonBuilder.create(RecipeCategory.FOOD, ModItems.BOTTLE_OF_SNACKIES_JELLY,1)
                 .input(Items.GLASS_BOTTLE)
                 .input(ModItems.SNACKIES)
