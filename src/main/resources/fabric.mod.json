@@ -1,44 +1,40 @@
 {
-	"schemaVersion": 1,
-	"id": "boxedsshenanigans",
-	"version": "${version}",
-	"name": "Boxed's Shenanigans",
-	"description": "Adds the things that I want into the game!",
-	"authors": [
-		"BoxedBoi"
-	],
-	"contact": {
-		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
-	},
-	"license": "ARR",
-	"icon": "assets/boxedsshenanigans/icon.png",
-	"environment": "*",
-	"entrypoints": {
-		"main": [
-			"net.boxedboi.boxedsshenanigans.BoxedsShenanigans"
-		],
-
-		"client": [
-			"net.boxedboi.boxedsshenanigans.BoxedsShenanigansClient"
-
-],
-
-
-			"fabric-datagen": [
-			"net.boxedboi.boxedsshenanigans.BoxedsShenanigansDataGenerator"
-		]
-	},
-	"mixins": [
-		"boxedsshenanigans.mixins.json"
-	],
-	"depends": {
-		"fabricloader": ">=0.16.14",
-		"minecraft": "~1.20.1",
-		"java": ">=17",
-		"fabric-api": "*"
-	},
-	"suggests": {
-		"another-mod": "*"
-	}
+    "schemaVersion": 1,
+    "id": "boxeds-shenanigans",
+    "version": "${version}",
+    "name": "Boxed's Shenanigans",
+    "description": "Adds the things that I want into the game!",
+    "authors": [
+        "BoxedBoi"
+    ],
+    "contact": {
+        "homepage": "https://fabricmc.net/",
+        "sources": "https://github.com/FabricMC/fabric-example-mod"
+    },
+    "license": "ARR",
+    "icon": "assets/boxeds-shenanigans/icon.png",
+    "environment": "*",
+    "entrypoints": {
+        "main": [
+            "com.github.boxedboi.boxedsshenanigans.BoxedsShenanigans"
+        ],
+        "client": [
+            "com.github.boxedboi.boxedsshenanigans.BoxedsShenanigansClient"
+        ],
+        "fabric-datagen": [
+            "com.github.boxedboi.boxedsshenanigans.BoxedsShenanigansDataGenerator"
+        ]
+    },
+    "mixins": [
+        "boxeds-shenanigans.mixins.json"
+    ],
+    "depends": {
+        "fabricloader": ">=0.16.14",
+        "minecraft": "~1.20.1",
+        "java": ">=17",
+        "fabric-api": "*"
+    },
+    "suggests": {
+        "another-mod": "*"
+    }
 }
